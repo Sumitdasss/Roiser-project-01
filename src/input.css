@@ -1,0 +1,22 @@
+@import "tailwindcss";
+@theme{
+   --spacing-mContainer:1460px; 
+--font-jots: "Zalando Sans SemiExpanded", sans-serif; 
+     --color-11: #74787C;
+     --color-12: #D9D9D9;
+     --color-13: #67B02E;
+     --color-14: #F1F1F1;
+     --color-15: #1A1A1A;
+     --color-16: #EDDECE;
+     --color-17: #629D23;
+     --color-18: #74787C;
+     --color-19: #FBAB48;
+     --color-20: #F6F6F7;
+     --color-21: #0DBB59;
+     --color-22: #7E88E7;
+     --color-23: #F0F0F0;
+     --color-24: #FAE2CD;
+     --color-25: #E3B695;
+     --color-26: #DDDDDE;
+}
+@plugin "daisyui";
