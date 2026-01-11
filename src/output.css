@@ -1974,6 +1974,12 @@
   .-ml-\[139px\] {
     margin-left: calc(139px * -1);
   }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
+  .ml-5 {
+    margin-left: calc(var(--spacing) * 5);
+  }
   .ml-\[0px\] {
     margin-left: 0px;
   }
@@ -2654,17 +2660,11 @@
   .px-\[14px\] {
     padding-inline: 14px;
   }
-  .px-\[15px\] {
-    padding-inline: 15px;
-  }
   .px-\[20px\] {
     padding-inline: 20px;
   }
   .px-\[30px\] {
     padding-inline: 30px;
-  }
-  .px-\[40px\] {
-    padding-inline: 40px;
   }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
