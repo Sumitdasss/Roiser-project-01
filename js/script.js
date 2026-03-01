@@ -123,3 +123,119 @@ $(document).ready(function(){
     startTimer(secondsInADay, 'timer8');
   };
 
+const addToCartButtons = document.querySelectorAll('.add-to-cart');
+const cartContent = document.querySelector('.cart-content'); 
+
+
+addToCartButtons.forEach(button => {
+  button.addEventListener("click", event => {
+   
+    const productbox = event.target.closest('.product-box'); 
+    
+    if (productbox) {
+      addtoCart(productbox); 
+    }
+    
+  });
+});
+
+
+const addtoCart = productbox => {
+  const productName = productbox.querySelector('.product-name').textContent;
+  const producimg = productbox.querySelector('img').src;
+  const productprice = productbox.querySelector('.product-price').textContent;
+  const cartItems = cartContent.querySelectorAll(".cart-item-subtotal");
+ for (let item of cartItems) {
+    if (item.textContent=== productName) {
+      alert("This product is already in the cart");
+      return; 
+    }
+  }
+
+  const total = productprice; 
+
+  const cartBox = document.createElement('div');
+  cartBox.className = `flex justify-around w-full h-[151px] items-center border-t-2 border-b-2 border-black/50 mb-2`;
+
+  cartBox.innerHTML = `
+        <div class="cursor-pointer ">
+            <i class="fa-solid fa-xmark remove-item"></i>
+        </div>
+
+        <div class="w-[80px] h-[80px] bg-white">
+            <img src="${producimg}" class="w-full h-full object-cover">
+        </div>
+
+        <div>
+            <p class=" cart-item-subtotal text-[20px] text-[#222222] font-semibold">${productName}</p>
+        </div>
+
+        <div>
+            <p class="text-[#74787C] text-[16px] font-medium">
+                <span class=" text-[18px] font-bold text-[#222222] cart-price">${productprice}</span>
+            </p>
+        </div>
+
+        <div class="flex cart-item-quantity">
+            <div class="w-[60px] h-[50px] border-2 border-black/50 flex justify-center items-center">
+                <p class="text-[18px] text-[#222222] font-semibold number">1</p>
+            </div>
+            <div>
+                <div class="w-7 h-[25px] border-2 border-black/50 flex justify-center items-center cursor-pointer">
+                    <button id="increase-btn" ><i class="fa-solid fa-angle-up"></i></button>
+                </div>
+                <div class="w-7 h-[25px] border-2 border-black/50 flex justify-center items-center cursor-pointer">
+                    <button id="decrease-btn"><i class="fa-solid fa-angle-down"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <p class="text-[18px] text-[#222222] font-semibold">${total}</p>
+        </div>`;
+cartBox.classList.add('cart-box');
+  cartContent.appendChild(cartBox);
+  cartBox.querySelector('.remove-item').addEventListener('click', () => {
+    cartBox.remove();
+    updateTotalprice();
+  });
+
+
+  cartBox.querySelector('.cart-item-quantity').addEventListener('click', event => {
+    const numberElement = cartBox.querySelector('.number');
+    const decreaseBtn = cartBox.querySelector('#decrease-btn');
+let quantity = numberElement.textContent;
+if(event.target.closest('#decrease-btn') && quantity > 1) {
+quantity--;
+if(quantity ==='1'){
+  decreaseBtn.style.color='#999'
+}
+}
+else if(event.target.closest('#increase-btn')) {
+quantity++;
+decreaseBtn.style.color='#33'
+}
+numberElement.textContent = quantity;
+updateTotalprice();
+});
+
+updateTotalprice();
+
+}
+
+
+const updateTotalprice= () =>{
+  const totalpriceElement = document.querySelector('.total-price');
+  const cartboxes = cartContent.querySelectorAll('.cart-box');
+
+  let total=0;
+  cartboxes.forEach(cartbox => {
+    const priceElement = cartbox.querySelector('.cart-price');
+    const qyntityElement = cartbox.querySelector('.number');
+    const price = priceElement.textContent.replace('$', '');
+    const quantity =qyntityElement.textContent;
+    total +=price *quantity;
+
+  });
+  totalpriceElement.textContent =`$${total}`;
+}

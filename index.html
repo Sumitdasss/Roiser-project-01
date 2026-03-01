@@ -68,15 +68,136 @@
 
             </div>
             <div class=" ">
-                <a href="" class="py-[20px] px-[30px] bg-14 text-[16px] font-bold rounded-[50px] text-11">Login / Register</a>
+                <a href="" class="py-[15px] px-[30px] bg-14 text-[16px] font-bold rounded-[50px] text-11">Login / Register</a>
             </div>
             <div class="">
-                 <a href="" class="py-[20px] px-[30px] bg-13 text-[16px] font-bold rounded-[50px] text-white"><i class="fa-solid fa-cart-shopping mr-[10px]"></i>$0.00</a>
+                 <button class="py-[15px] px-[30px] bg-13 text-[16px] font-bold rounded-[50px] text-white"><i class="fa-solid fa-cart-shopping mr-[10px]"></i>$0.00</button>
             </div>
         </div>
     </div>
 </div>
 <!-- Header part end 02 -->
+
+
+<div  class="">
+ <div class="max-w-mContainer mx-auto">
+    <div class="flex justify-between mt-[100px]">
+    <div class="">
+<div class="w-[952px] pb-[30px] bg-[#F6F6F7]">
+<div class="flex  h-[61px] items-center border-b-3 border-black/50">
+    <p class="text-[18px] text-[#74787C] font-semibold pl-[200px]">Products</p>
+    <p class="text-[18px] text-[#74787C] font-semibold  pl-[250px]">Price</p>
+    <p class="text-[18px] text-[#74787C] font-semibold  pl-[110px]">Quantity</p>
+    <p class="text-[18px] text-[#74787C] font-semibold  pl-[65px]">SubTotal</p>
+
+</div>
+<div class="cart-content">
+    <!-- <div class="cart-box">
+        
+    </div>
+    -->
+
+</div>
+
+<div class="flex mt-[30px]">
+<div class="ml-[30px]">
+   <input type="text" placeholder="Cupon Code" class="w-[296px] h-[61px] rounded-lg bg-white border-3 border-black/50 focus:outline-none pl-[15px] placeholder:text-[#74787C]/50"> 
+   <button class="px-7.5 py-4 bg-white border-3 font-semibold rounded-lg border-black/50 text-[#222222] uppercase">Apply Coupon</button>
+   <button id="updateCart" class="px-7.5 py-4 bg-red-500 font-semibold rounded-lg text-white uppercase ml-[205px]">Update Cart</button>
+
+</div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<div class="">
+
+
+<div class="w-[450px] bg-[#F9F9F9] p-8 border border-gray-100 rounded-sm font-sans">
+    <h2 class="text-[22px] font-bold text-[#222222] mb-6 pb-4 border-b border-gray-200">
+        Cart Totals
+    </h2>
+
+    
+
+    <div class="py-8 border-b border-gray-200">
+        <div class="flex justify-between mb-4">
+            <span class="text-[16px] text-[#74787C] font-medium">Shipping</span>
+            <div class="text-right space-y-3">
+                <label class="flex items-center justify-end gap-3 cursor-pointer">
+                    <span class="text-[16px] text-[#444444]">Free Shipping</span>
+                    <input type="radio" name="shipping" checked class="w-4 h-4 accent-black">
+                </label>
+                <label class="flex items-center justify-end gap-3 cursor-pointer">
+                    <span class="text-[16px] text-[#444444]">Flat Rate</span>
+                    <input type="radio" name="shipping" class="w-4 h-4 accent-black">
+                </label>
+                <label class="flex items-center justify-end gap-3 cursor-pointer">
+                    <span class="text-[16px] text-[#444444]">Local Pickup</span>
+                    <input type="radio" name="shipping" class="w-4 h-4 accent-black">
+                </label>
+            </div>
+        </div>
+        
+        <p class="text-[14px] text-[#74787C] text-right mt-4 leading-relaxed">
+            Shipping options will be updated <br> during checkout
+        </p>
+        
+        <div class="text-right mt-2">
+            <button class="text-[15px] font-bold text-[#222222] hover:underline transition-all">
+                Calculate Shipping
+            </button>
+        </div>
+    </div>
+
+    <div class="flex justify-between items-center py-8">
+        <span class="text-[16px] text-[#74787C] font-medium">Total</span>
+        <span id="totalnumber" class="text-[22px] font-bold text-[#222222] total-price">$0.00</span>
+    </div>
+
+    <button class="w-full bg-[#EF4444] text-white py-4 text-[16px] font-bold uppercase tracking-wider rounded-md hover:bg-[#D93636] transition-all duration-300">
+        Proceed to Checkout
+    </button>
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+ </div>
+
+</div>
+
+
+
+
+
+
 <!-- Header part start 03 -->
 
 <div class="bg-13 h-[50px]">
@@ -509,7 +630,7 @@ Snack Mix</h4>
             </div>
         </div>
         <div class="slider2 justify-between items-center">
-              <div class="w-[233px] h-[458px] bg-white rounded-[5px] border-2 border-15/8 relative mr-[8px] mt-[30px]">
+              <div class="w-[233px] h-[458px] bg-white rounded-[5px] border-2 border-15/8 relative mr-[8px] mt-[30px] product-box">
                 <div class="dropdown absolute left-[164px] top-[10px]" >
   <div tabindex="0" role="button" class="btn m-1 rounded-full w-[40px] h-[40px] border-none bg-11/10 hover:bg-13 hover:text-white hover:duration-500"><i class="fa-solid fa-plus text-[16px]"></i></div>
   <ul tabindex="-1" class="dropdown-content menu bg-base-100  z-1 w-[60px] h-auto p-2 shadow-sm  -ml-[5px]">
@@ -522,19 +643,21 @@ Snack Mix</h4>
                 <img src="imge/images.jpg" alt="imge/images.jpg" class="w-50 h-40 object-cover ml-[0px] mt-[20px]">
             </picture>
             <div class="ml-[15px] mt-[20px]">
-            <p class="px-2 py-1 bg-13/10 text-[14px] text-13 font-medium uppercase inline-block rounded-[5px]"  >Nescafe USA</p>
-            <h4 class="text-[16px] text-black font-medium pt-[15px]">Peysan Suezme Peynir<br>
+            <p class="px-2 py-1 bg-13/10 text-[14px] text-13 font-medium uppercase inline-block rounded-[5px] ">Nescafe USA</p>
+            <h4 class="text-[16px] text-black font-medium pt-[15px] product-name">Peysan Suezme Peynir<br>
 Tam Yoguart Panir</h4>
             <h4 class="text-[16px] text-18 font-medium pt-[5px]"> 500g Pack</h4>
             </div>
             <div class="flex ml-[15px]">
-                <h4 class="text-[18px] text-red-500 font-normal ">$36.00</h4>
+                <h4 class="text-[18px] text-red-500 font-normal product-price">$36.00</h4>
                 <h4 class="text-[16px] text-black font-medium inline-block pl-[20px] relative after:absolute after:content-[' '] after:h-[2px] after:w-[60px] after:bg-red-500  after:-ml-[60px] after:mt-[11px]">$40.00</h4>
             </div>
         
-            <div class="w-full h-[60px] bg-13 mt-[9px] rounded-bl-[5px] rounded-br-[5px] hover:bg-white  hover:border-t-2 border-15/8 text-center text-[15px] text-white font-semibold uppercase hover:text-13 hover:duration-500" >
-                           <a href="" class="mt-[20px] inline-block ">Add To Cart</a>
-            </div>
+            <div class="w-full h-[60px] bg-13 mt-[9px] rounded-bl-[5px] rounded-br-[5px] hover:bg-white hover:border-t-2 border-15/8 transition-all duration-500">
+    <button class="w-full h-full text-center text-[15px] text-white font-semibold uppercase hover:text-13 add-to-cart">
+        Add To Cart
+    </button>
+</div>
  
            
         </div>
