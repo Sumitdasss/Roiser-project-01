@@ -255,3 +255,20 @@ cartCounterElement.style.visibility = 'hidden';
 cartCounterElement.textContent = "";
 }
 }
+ 
+const prosidebtn=document.querySelector('.chekoutbtn');
+prosidebtn.addEventListener('click',()=>{
+  const cartBoxes=document.querySelectorAll('.cart-box');
+  if(cartBoxes.length === 0){
+    alert("Your cart is empty");
+    return;
+  }
+
+  cartBoxes.forEach(cartBox => {
+    cartBox.remove();
+  })
+cartcounter=0;
+updateCartCounter(0);
+updateTotalprice();
+alert("Thank you for your purchase!");
+})
