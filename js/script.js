@@ -198,6 +198,7 @@ cartBox.classList.add('cart-box');
   cartBox.querySelector('.remove-item').addEventListener('click', () => {
     cartBox.remove();
     updateTotalprice();
+    updateCartCounter(-1);
   });
 
 
@@ -220,6 +221,7 @@ updateTotalprice();
 });
 
 updateTotalprice();
+updateCartCounter(1);
 
 }
 
@@ -238,4 +240,18 @@ const updateTotalprice= () =>{
 
   });
   totalpriceElement.textContent =`$${total}`;
+}
+
+let cartcounter=0;
+
+const updateCartCounter = change => {
+const cartCounterElement = document.querySelector('.cart-counter');
+cartcounter += change;
+if(cartcounter > 0){
+cartCounterElement.style.visibility = 'visible';
+cartCounterElement.textContent = cartcounter;
+} else {
+cartCounterElement.style.visibility = 'hidden';
+cartCounterElement.textContent = "";
+}
 }
