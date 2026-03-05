@@ -272,3 +272,12 @@ updateCartCounter(0);
 updateTotalprice();
 alert("Thank you for your purchase!");
 })
+
+let homepage=document.getElementById("homepage")
+let cart=document.getElementById("cart-part")
+let CartBtn=document.getElementById("CartBtn")
+
+CartBtn.addEventListener("click",()=>{
+homepage.classList.add("hidden")
+cart.classList.remove("hidden")
+});
